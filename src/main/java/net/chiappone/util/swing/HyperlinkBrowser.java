@@ -19,13 +19,6 @@ public class HyperlinkBrowser implements HyperlinkListener {
 
     private static final Logger logger = LoggerFactory.getLogger( HyperlinkBrowser.class );
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * javax.swing.event.HyperlinkListener#hyperlinkUpdate(javax.swing.event
-     * .HyperlinkEvent)
-     */
     @Override public void hyperlinkUpdate( HyperlinkEvent e ) {
 
         if ( e.getEventType().equals( HyperlinkEvent.EventType.ACTIVATED ) ) {
@@ -44,7 +37,7 @@ public class HyperlinkBrowser implements HyperlinkListener {
 
                     } catch ( Exception ex ) {
 
-                        logger.error( "Error browsing to URL: {}", url );
+                        logger.error( "Error browsing to URL: {}", url, ex );
 
                     }
 

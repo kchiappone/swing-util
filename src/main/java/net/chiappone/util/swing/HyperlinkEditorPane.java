@@ -13,9 +13,6 @@ public class HyperlinkEditorPane extends JEditorPane {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @param text
-     */
     public HyperlinkEditorPane( String text ) {
 
         super();
@@ -26,12 +23,9 @@ public class HyperlinkEditorPane extends JEditorPane {
 
     }
 
-    /**
-     * @return
-     */
     private String getStyle() {
 
-        // Set the style by copying JLabel's style
+        // Copy JLabel's style
         JLabel label = new JLabel();
         this.setBackground( label.getBackground() );
 
